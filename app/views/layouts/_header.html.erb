@@ -1,8 +1,14 @@
 <div class ="header">
 
 	<div class ="header-container">
-		<%= link_to "Home", root_path %>
-		<%= link_to "About", about_path %>
+		
+		<% if editor_signed_in?%>
+			<%= link_to "New Article", newarticle_path %>
+			<%= link_to "All Articles", indexarticles_path %>
+		<%else%>
+			<%= link_to "Home", root_path %>
+			<%= link_to "About", about_path %>
+		<%end%>
 
 	</div>
 
