@@ -5,9 +5,21 @@
 		<% if editor_signed_in?%>
 			<%= link_to "New Article", newarticle_path %>
 			<%= link_to "All Articles", indexarticles_path %>
+
+			
 		<%else%>
-			<%= link_to "Home", root_path %>
-			<%= link_to "About", about_path %>
+			<%= link_to "ALL", root_path %>
+			<%= link_to "BUSINESS", root_path %>
+			<%= link_to "ART & DESIGN", root_path %>
+			<%= link_to "ENTERTAINMENT", root_path %>
+			<%= link_to "SPORTS", root_path %>
+			<%= link_to "POLITICS", root_path %>
+			<%= link_to "LITERATURE", root_path %>
+			<%= link_to "FASHION & STYLE", root_path %>
+			<%= link_to "TECHNOLOGY", root_path %>
+			<%= link_to "MUSIC", root_path %>
+			<%= link_to "ACADEMIA", root_path %>
+			<%= link_to "LEISURE", root_path %>
 		<%end%>
 
 	</div>

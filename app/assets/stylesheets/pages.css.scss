@@ -16,14 +16,16 @@
 	margin-right:auto;
 	padding:2px 0px 2px 0px;
 	color:white;
+	text-align:center;
 
 }
 
 .header-container a{
 	color:white;
 	text-decoration:none;
-	margin-left:3px;
-	margin-right:3px;
+	margin-left:8px;
+	margin-right:8px;
+	font-size:12px;
 
 }
 
@@ -31,6 +33,13 @@
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;
+	margin-top:20px;
+}
+
+.top-story a{
+	font-size:50px;
+	color:black;
+	text-decoration:underline;
 }
 
 .brand-top{
@@ -39,10 +48,19 @@
 	text-align:center;
 }
 
+.brand-top h1{
+	font-size:60px;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
 .home-column{
 	float:left;
 	width:390px;
 	padding:15px;
+	
+	display: inline-block;
+
 }
 
 .center-column{

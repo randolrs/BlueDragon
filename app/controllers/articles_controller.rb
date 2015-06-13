@@ -40,6 +40,11 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+
+    if @article.lead == true
+      Article.find_by_lead(true).update(lead: false)
+    end
+
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
@@ -69,6 +74,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:headline, :url, :image)
+      params.require(:article).permit(:headline, :url, :image, :category, :imgoption, :lead)
     end
 end

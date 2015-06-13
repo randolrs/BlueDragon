@@ -1,0 +1,16 @@
+<table class ="article-index-table">
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr data-link="<%=article.url%>", class="article-index-row">
+        <td class="article-index-data">
+        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><%end%>
+        	<br>
+        	<b><%=link_to article.headline, article.url%></b>
+    	</td>
+      </tr>
+    <% end %>
+
+  </tbody>
+
+</table>

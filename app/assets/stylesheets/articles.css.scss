@@ -1,3 +1,37 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article-image-small{
+	width:200px;
+	margin-bottom:10px;
+}
+
+.article-image-lead{
+	height:250px;
+}
+
+.article-index-table{
+	width:390px;	
+}
+
+.article-index-row{
+	margin:3px 5px 3px 5px;
+}
+
+.article-index-data{
+	border-bottom:1px solid #A89898;
+	padding:10px;
+	
+}
+
+.article-index-data a{
+	text-decoration:underline;
+	color:black;
+}
+
+
+.article-index-row:hover{
+	background-color:#F0FFFF;
+	cursor:pointer;
+}

@@ -1,19 +1,19 @@
 <div class = "top-story">
 
-	img placeholder <br>
-	Link placeholder
+	<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
+	<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
 
 </div>
 
 <div class = "brand-top">
 
-	<h1>Shane Report</h1>
+	<h1><i>Shane Report</i></h1>
 
 </div>
 
 <div class="home-column">
 	<div class = "article-content">
-		head of column 1
+		<%=render 'pages/articleindex'%>
 	</div>
 	<div class = "personal-content">
 		
@@ -22,7 +22,7 @@
 
 <div class="home-column center-column">
 	<div class = "article-content">
-		head of column 2
+		<%=render 'pages/articleindex'%>
 	</div>
 	<div class = "personal-content">
 		
@@ -31,7 +31,7 @@
 
 <div class="home-column">
 	<div class = "article-content">
-		head of column 3
+		<%=render 'pages/articleindex'%>
 	</div>
 	<div class = "personal-content">
 		
