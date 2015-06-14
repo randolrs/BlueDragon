@@ -1,9 +1,8 @@
 <div class = "top-story">
-	<% if @leadarticle.image.nil?%>
 
-	<%else%>
-	<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
-	<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
+	<%if @leadarticle.imgoption%>
+		<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
+		<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
 	<%end%>
 </div>
 
