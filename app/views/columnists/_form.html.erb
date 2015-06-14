@@ -1,0 +1,42 @@
+<%= form_for(@columnist) do |f| %>
+  <% if @columnist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@columnist.errors.count, "error") %> prohibited this columnist from being saved:</h2>
+
+      <ul>
+      <% @columnist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Website" %><br>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Rating" %><br>
+    <%= f.number_field :rating %>
+  </div>
+
+    <div class="field">
+      <%= f.label :category %><br>
+      <%= f.select :category, [['Business'],['Art & Design'],['Entertainment'],['Sports'],['Politics'],['Literature'],['Fashion & Style'],['Technology'],['Music'],['Academia'],['Leisure']], :placeholder => "Select a category" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :type %><br>
+      <%= f.select :category, [['Person'],['News Outlet'],['Entertainment'],['Sports']], :placeholder => "Select a type" %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

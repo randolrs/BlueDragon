@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :columnists
+
   resources :articles
 
   devise_for :editors
@@ -15,6 +17,10 @@ Rails.application.routes.draw do
   get "newarticle" => "articles#new"
 
   get "indexarticles" => "articles#index"
+
+  get "newcolumnist" => "columnists#new"
+
+  get "indexcolumnists" => "columnists#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,29 @@
+<h1>Listing columnists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @columnists.each do |columnist| %>
+      <tr>
+        <td><%= columnist.name %></td>
+        <td><%= columnist.url %></td>
+        <td><%= columnist.rating %></td>
+        <td><%= link_to 'Show', columnist %></td>
+        <td><%= link_to 'Edit', edit_columnist_path(columnist) %></td>
+        <td><%= link_to 'Destroy', columnist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Columnist', new_columnist_path %>

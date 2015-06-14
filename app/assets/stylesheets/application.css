@@ -24,6 +24,7 @@ body{
 .container{
 	width:100%;
 	overflow:hidden;
+	min-height: 700px;
 }
 
 .content-panel{
