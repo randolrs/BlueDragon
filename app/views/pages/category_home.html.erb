@@ -14,13 +14,13 @@
 	<%end%>
 
 	<div class="home-column">
-		<%unless @articles1.nil?%>
+		<%unless @articles.nil?%>
 			<div class = "article-content">
 			
 				<table class ="article-index-table">
 
 				  <tbody>
-				    <% @articles1.each do |article| %>
+				    <% @articles.each do |article| %>
 				      <tr data-link="<%=article.url%>", class="article-index-row">
 				        <td class="article-index-data">
 				        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
