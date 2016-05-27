@@ -1,12 +1,14 @@
 <div class="page-container">
 
 	<%unless @leadarticle.nil?%>
-		<a href="<%=@leadarticle.url%>">
-			<div class="top-story">
+		
+		<div class="top-story">
+			<a href="<%=@leadarticle.url%>" class="no-style-link">
 				<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
 				<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
-			</div>
-		</a>
+			</a>
+		</div>
+		
 	<%end%>
 
 	<div class="home-articles-container">

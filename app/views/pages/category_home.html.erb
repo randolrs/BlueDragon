@@ -7,10 +7,14 @@
 <div class="page-container category">
 
 	<%unless @leadarticle.nil?%>
+		
 		<div class = "top-story">
-			<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
-			<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
+			<a href="<%= @leadarticle.url %>" class="no-style-link">
+				<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
+				<%= link_to @leadarticle.headline.upcase, @leadarticle.url%>
+			</a>
 		</div>
+		
 	<%end%>
 
 	<div class="home-column">
