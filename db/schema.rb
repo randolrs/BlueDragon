@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527180811) do
+ActiveRecord::Schema.define(version: 20160527203918) do
 
   create_table "articles", force: true do |t|
     t.string   "headline"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20160527180811) do
     t.boolean  "lead"
     t.boolean  "red"
     t.boolean  "italicize"
+    t.integer  "category_1_id",      default: 0
+    t.integer  "category_2_id",      default: 0
   end
 
   create_table "categories", force: true do |t|

@@ -22,11 +22,11 @@ Rails.application.routes.draw do
 
   get "index_categories" => "categories#index"
 
-  get '/:category' => 'pages#category_home', as: 'category_home'
-
   get "newcolumnist" => "columnists#new"
 
   get "indexcolumnists" => "columnists#index"
+
+  get '/:category' => 'pages#category_home', as: 'category_home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

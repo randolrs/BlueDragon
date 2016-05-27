@@ -25,6 +25,7 @@ body{
 .container{
 	width:100%;
 	min-height: 700px;
+	margin-top: 50px;
 }
 
 .content-panel{

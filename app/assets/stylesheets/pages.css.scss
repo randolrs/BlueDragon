@@ -28,9 +28,13 @@
 
 }
 
+.page-container{
+	margin-top:40px;
+}
+
 .top-story{
-	margin: 20px auto 50px auto;
-	width:1000px;
+	margin: 0px auto 50px auto;
+	max-width:1000px;
 	text-align:center;
 }
 
@@ -55,7 +59,7 @@
 .home-column{
 	float:left;
 	width:402px;
-	padding:15px;
+	padding:0px 15px;
 	
 	display: inline-block;
 
@@ -72,6 +76,8 @@
 
 .category-page-header {
 	background-color:#222;
+	position: fixed;
+    width: 100%;
 }
 
 .category-page-header h2 {

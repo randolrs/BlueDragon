@@ -22,8 +22,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :category %><br>
-    <%= f.select :category, [['Business'],['Art & Design'],['Entertainment'],['Sports'],['Politics'],['Literature'],['Fashion & Style'],['Technology'],['Music'],['Academia'],['Leisure']], :placeholder => "Select a category" %>
+    <p>Category (Primary)</p>
+    <%= collection_select(:article, :category_1_id, Category.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <p>Category (Secondary)</p>
+    <%= collection_select(:article, :category_2_id, Category.all, :id, :name) %>
   </div>
 
     <div class="form-group">

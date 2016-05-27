@@ -1,8 +1,10 @@
 <%unless @leadarticle.nil?%>
-	<div class = "top-story">
-		<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
-		<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
-	</div>
+	<a href="<%=@leadarticle.url%>">
+		<div class = "top-story">
+			<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
+			<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
+		</div>
+	</a>
 <%end%>
 
 <div class="home-column">

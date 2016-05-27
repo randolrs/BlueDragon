@@ -46,6 +46,17 @@
 
     	<li class="right"><a href='/about'><span>About</span></a></li>
 
+    	<% if editor_signed_in? %>
+    		<li class="right" class='active has-sub'><a href='#'><span>Editor</span></a>
+         		<ul>
+					<li><a href='<%= indexarticles_path %>'><span>Articles</span></a></li>
+					<li><a href='<%= index_categories_path %>'><span>Categories</span></a></li>
+					<li><a href='<%= indexcolumnists_path %>'><span>Columnists</span></a></li>
+		            <li><a data-method="delete" href='<%=destroy_editor_session_path%>'><span>Logout</span></a>
+		        </ul>
+      		</li>  
+    	<%end%>
+
    </ul>
 
 </div>
