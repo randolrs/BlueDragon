@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
 
-    #@all_category = Category.find_by_name("All")
+    @all_category = Category.find_by_name("All")
 
   	@leadarticle = Article.find_by_lead(true)
  
@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   	# @columnists2 = Columnist.all.order("created_at DESC").limit(5).offset(5).order("rating DESC")
   	# @columinsts3 = Columnist.all.order("created_at DESC").limit(5).offset(10).order("rating DESC")
 
-    #@header_categories = Category.where("parent_category_id = :all_category_id", {all_category_id: @all_category.id})
+    @header_categories = Category.where("parent_category_id = :all_category_id", {all_category_id: @all_category.id})
 
 
   end
