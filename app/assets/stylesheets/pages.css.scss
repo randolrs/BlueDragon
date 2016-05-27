@@ -62,7 +62,8 @@
 
 .home-column{
 	float:left;
-	width:402px;
+	width:400px;
+	max-width:33.33%;
 	padding:0px 10px;
 	
 	display: inline-block;
@@ -79,16 +80,39 @@
 }
 
 .category-page-header {
-	background-color:#222;
-	position: fixed;
+	background-color: #eee;
+    position: fixed;
     width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #ccc;
 }
 
 .category-page-header h2 {
 	text-align:center;
-	color:#fff;
+	color:#333;
 	margin:0px;
 	line-height: 2;
+}
+
+.home-articles-container{
+	max-width: 1200px !important;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    float: right;
+    left: -50%;
+    position: relative;
+}
+
+.home-articles{
+	max-width: 1200px !important;
+    margin: 0 auto;
+    padding: 25px 0px;
+    width: 100%;
+    float: left;
+    left: 50%;
+    display: block;
+    position: relative;
 }
 
 .footer{

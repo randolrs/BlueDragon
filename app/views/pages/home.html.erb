@@ -9,127 +9,138 @@
 		</a>
 	<%end%>
 
-	<div class="home-column">
-		<%unless @articles1.nil?%>
-			<div class = "article-content">
-			
-				<table class ="article-index-table">
+	<div class="home-articles-container">
 
-				  <tbody>
-				    <% @articles1.each do |article| %>
-				      <tr data-link="<%=article.url%>", class="article-index-row">
-				        <td class="article-index-data">
-				        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
-				        	<b><%=link_to article.headline, article.url%></b>
-				    	</td>
-				      </tr>
-				    <% end %>
+		<div class="home-articles">
 
-				  </tbody>
+			<div class="home-column">
+				<%unless @articles1.nil?%>
+					<div class = "article-content">
+					
+						<table class ="article-index-table">
 
-				</table>
-			</div>
-		<%end%>
-		
-		<%unless @columnists1.nil?%>
-			<div class = "columnist-content">
+						  <tbody>
+						    <% @articles1.each do |article| %>
+						      <tr data-link="<%=article.url%>", class="article-index-row">
+						        <td class="article-index-data">
+						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<b><%=link_to article.headline, article.url%></b>
+						    	</td>
+						      </tr>
+						    <% end %>
 
-			
-				<table class ="article-index-table">
+						  </tbody>
 
-				  <tbody>
-				    <% @columnists1.each do |columnist| %>
-				      <tr data-link="<%=columnist.url%>", class="article-index-row">
-				        <td class="article-index-data">
-				        	<b><%=link_to columnist.name, columnist.url%></b>
-				    	</td>
-				      </tr>
-				    <% end %>
-
-				  </tbody>
-
-				</table>
-			
-			</div>
-		<%end%>
-	</div>
-
-	<div class="home-column center-column">
-		<%unless @articles2.nil?%>
-			<div class = "article-content">
-			
-				<table class ="article-index-table">
-
-				  <tbody>
-				    <% @articles2.each do |article| %>
-				      <tr data-link="<%=article.url%>", class="article-index-row">
-				        <td class="article-index-data">
-				        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
-				        	<b><%=link_to article.headline, article.url%></b>
-				    	</td>
-				      </tr>
-				    <% end %>
-
-				  </tbody>
-
-				</table>
-			
-			</div>
-		<%end%>
-
-		<%unless @columnists2.nil?%>
-			<div class = "columnist-content">
-			
-				<table class ="article-index-table">
-
-				  <tbody>
-				    <% @columnists2.each do |columnist| %>
-				      <tr data-link="<%=columnist.url%>", class="article-index-row">
-				        <td class="article-index-data">
-				        	<b><%=link_to columnist.name, columnist.url%></b>
-				    	</td>
-				      </tr>
-				    <% end %>
-
-				  </tbody>
-
-				</table>
-			</div>
-		<%end%>
-	</div>
-
-	<div class="home-column">
-		<%unless @articles3.nil?%>
-			<div class = "article-content">
-				<table class ="article-index-table">
-
-				  <tbody>
-				    <% @articles3.each do |article| %>
-				      <tr data-link="<%=article.url%>", class="article-index-row">
-				        <td class="article-index-data">
-				        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
-				        	<b><%=link_to article.headline, article.url%></b>
-				    	</td>
-				      </tr>
-				    <% end %>
-
-				  </tbody>
-
-				</table>
-			
-			</div>
-		<%end%>
-
-		<%unless @columnists3.nil?%>
-			<div class = "columnist-content">
+						</table>
+					</div>
+				<%end%>
 				
-				<table class ="article-index-table">
+				<%unless @columnists1.nil?%>
+					<div class = "columnist-content">
+
+					
+						<table class ="article-index-table">
+
+						  <tbody>
+						    <% @columnists1.each do |columnist| %>
+						      <tr data-link="<%=columnist.url%>", class="article-index-row">
+						        <td class="article-index-data">
+						        	<b><%=link_to columnist.name, columnist.url%></b>
+						    	</td>
+						      </tr>
+						    <% end %>
+
+						  </tbody>
+
+						</table>
+					
+					</div>
+				<%end%>
+			</div>
+
+			<div class="home-column center-column">
+				<%unless @articles2.nil?%>
+					<div class = "article-content">
+					
+						<table class ="article-index-table">
+
+						  <tbody>
+						    <% @articles2.each do |article| %>
+						      <tr data-link="<%=article.url%>", class="article-index-row">
+						        <td class="article-index-data">
+						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<b><%=link_to article.headline, article.url%></b>
+						    	</td>
+						      </tr>
+						    <% end %>
+
+						  </tbody>
+
+						</table>
+					
+					</div>
+				<%end%>
+
+				<%unless @columnists2.nil?%>
+					<div class = "columnist-content">
+					
+						<table class ="article-index-table">
+
+						  <tbody>
+						    <% @columnists2.each do |columnist| %>
+						      <tr data-link="<%=columnist.url%>", class="article-index-row">
+						        <td class="article-index-data">
+						        	<b><%=link_to columnist.name, columnist.url%></b>
+						    	</td>
+						      </tr>
+						    <% end %>
+
+						  </tbody>
+
+						</table>
+					</div>
+				<%end%>
+			</div>
+
+			<div class="home-column">
+				<%unless @articles3.nil?%>
+					<div class = "article-content">
+						<table class ="article-index-table">
+
+						  <tbody>
+						    <% @articles3.each do |article| %>
+						      <tr data-link="<%=article.url%>", class="article-index-row">
+						        <td class="article-index-data">
+						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<b><%=link_to article.headline, article.url%></b>
+						    	</td>
+						      </tr>
+						    <% end %>
+
+						  </tbody>
+
+						</table>
+					
+					</div>
+				<%end%>
+
+				<%unless @columnists3.nil?%>
+
+					<div class = "columnist-content">
+						
+						<table class ="article-index-table">
 
 
-				</table>
+						</table>
+
+					</div>
+
+				<%end%>
 
 			</div>
-		<%end%>
+
+		</div>
+
 	</div>
 
 </div>
