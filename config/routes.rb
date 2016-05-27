@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :categories
+
   resources :columnists
 
   resources :articles
@@ -17,6 +19,10 @@ Rails.application.routes.draw do
   get "newarticle" => "articles#new"
 
   get "indexarticles" => "articles#index"
+
+  get "index_categories" => "categories#index"
+
+  get '/:category' => 'pages#category_home', as: 'category_home'
 
   get "newcolumnist" => "columnists#new"
 

@@ -1,0 +1,40 @@
+<%= form_for(@category) do |f| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+      <% @category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <a>Top Article</a> <br>
+    <%= collection_select(:category, :top_article_id, Article.all, :id, :headline) %>
+  </div>
+
+   <div class="field">
+    <a>Parent Category</a> <br>
+    <%= collection_select(:category, :parent_category_id, Category.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <a>Display in Header?</a>
+    <%= f.check_box :header_display %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
