@@ -15,11 +15,11 @@
 
 		<div class="home-articles">
 
-			<div class="home-column">
+			<div class="home-column left-column">
 				<%unless @articles1.nil?%>
 					<div class = "article-content">
 					
-						<table class ="article-index-table">
+						<table class ="article-index-table ">
 
 						  <tbody>
 						    <% @articles1.each do |article| %>
@@ -104,7 +104,7 @@
 				<%end%>
 			</div>
 
-			<div class="home-column">
+			<div class="home-column right-column">
 				<%unless @articles3.nil?%>
 					<div class = "article-content">
 						<table class ="article-index-table">

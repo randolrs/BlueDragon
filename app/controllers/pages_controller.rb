@@ -9,6 +9,10 @@ class PagesController < ApplicationController
   	@articles2 = Article.where("category_1_id = :sports or category_1_id = :entertainment and not id = :lead_article_id", {sports: 3, entertainment: 2, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
     @articles3 = Article.where("category_1_id = :world or category_1_id = :culture and not id = :lead_article_id", {world: 5, culture: 6, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
 
+
+    @articles_two_column_1 = Article.where("category_1_id = :business or category_1_id = :politics or category_1_id = :world and not id = :lead_article_id", {business: 1, politics: 4, world: 5, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+    @articles_two_column_2 = Article.where("category_1_id = :sports or category_1_id = :entertainment or category_1_id = :culture and not id = :lead_article_id", {sports: 3, entertainment: 2, culture: 6, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+
   	# @columnists1 = Columnist.all.order("created_at DESC").limit(5).order("rating DESC")
   	# @columnists2 = Columnist.all.order("created_at DESC").limit(5).offset(5).order("rating DESC")
   	# @columinsts3 = Columnist.all.order("created_at DESC").limit(5).offset(10).order("rating DESC")

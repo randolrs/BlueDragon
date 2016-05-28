@@ -63,7 +63,7 @@
 .home-column{
 	float:left;
 	width:398px;
-	max-width:33.33%;
+	max-width:33%;
 	display: inline-block;
 
 }
@@ -143,5 +143,23 @@ a.no-style-link{
 	margin-left:3px;
 	margin-right:3px;
 
+}
+
+@media only screen and (max-width: 800px) {
+
+	.home-column.right-column{
+		display:none;
+	}
+
+	.home-column.left-column{
+		max-width:49.5%;
+		width:399px;
+	}
+
+	.home-column.center-column{
+		max-width:49.5%;
+		width:399px;
+		border-right:none;
+	}
 }
 
