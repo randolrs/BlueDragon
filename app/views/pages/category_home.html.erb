@@ -10,7 +10,7 @@
 		
 		<div class="top-story">
 			<a href="<%=@leadarticle.url%>" class="no-style-link">
-				<%= image_tag @leadarticle.image, class: "article-image-lead"%> <br>
+				<%if @leadarticle.imgoption and @leadarticle.img_url %><img class="article-image-lead" src="<%= @leadarticle.img_url%>"></img><br><%end%>
 				<%=link_to @leadarticle.headline.upcase, @leadarticle.url%>
 			</a>
 		</div>
