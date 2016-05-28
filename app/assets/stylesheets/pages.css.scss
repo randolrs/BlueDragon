@@ -34,10 +34,6 @@
 	background: #fff
 }
 
-.page-container.category{
-	padding:82px 10px;
-}
-
 .top-story{
 	margin: 0px auto 50px auto;
 	max-width:1000px;
@@ -114,10 +110,6 @@ a.article-headline{
     margin-top:50px;
 }
 
-.home-articles-container.category{
-	margin-top:82px;
-}
-
 .home-articles{
 	max-width: 1200px !important;
     margin: 0 auto;
@@ -171,12 +163,12 @@ a.no-style-link{
 	}
 
 	.home-column.left-column{
-		max-width:49.5%;
+		max-width:47%;
 		width:399px;
 	}
 
 	.home-column.center-column{
-		max-width:49.5%;
+		max-width:47%;
 		width:399px;
 		border-right:none;
 	}
