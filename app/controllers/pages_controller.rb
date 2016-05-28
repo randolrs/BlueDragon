@@ -32,7 +32,72 @@ class PagesController < ApplicationController
     @leadarticle = Article.find(@category.top_article_id)
  
     @articles = Article.where("category_1_id = :category_id and not id = :lead_article_id", {category_id: @category.id, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+
+    ###Standard, three column article collections
+
+    @articles1 = Array.new
+    @articles2 = Array.new 
+    @articles3 = Array.new
+
+    c = @articles.count
     
+    i = 0
+
+    @articles.each do |article|
+
+      if i == 0
+
+        @articles1 << article
+
+        i = 1
+
+      elsif i == 1
+
+        @articles2 << article
+
+        i = 2
+
+      elsif i == 2
+
+        @articles3 << article
+
+        i = 0
+
+      else
+
+        #ruro
+      end
+
+    end  
+
+###Flexible, two column article collections
+
+    j = 0
+
+    @articles_two_columns_1 = Array.new
+    @articles_two_columns_2 = Array.new
+
+    @articles.each do |article|
+
+      if j == 0
+
+        @articles_two_columns_1 << article
+
+        j = 1
+
+      elsif j == 1
+
+        @articles_two_columns_2 << article
+
+        j = 2
+
+      else
+
+        #ruro
+      end
+
+    end  
+
     @all_category = Category.find_by_name("All")
 
     @header_categories = Category.where("parent_category_id = :all_category_id", {all_category_id: @all_category.id})
