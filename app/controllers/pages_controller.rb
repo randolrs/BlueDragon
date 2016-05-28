@@ -4,14 +4,16 @@ class PagesController < ApplicationController
     @all_category = Category.find_by_name("All")
 
   	@leadarticle = Article.find_by_lead(true)
- 
-  	@articles1 = Article.where("category_1_id = :business or category_1_id = :politics and not id = :lead_article_id", {business: 1, politics: 4, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
-  	@articles2 = Article.where("category_1_id = :sports or category_1_id = :entertainment and not id = :lead_article_id", {sports: 3, entertainment: 2, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
-    @articles3 = Article.where("category_1_id = :world or category_1_id = :culture and not id = :lead_article_id", {world: 5, culture: 6, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+    
+    @articles_visible = Article.where("visible = :visible_true", {visible_true: true})
+
+  	@articles1 = @articles_visible.where("category_1_id = :business or category_1_id = :politics and not id = :lead_article_id", {business: 1, politics: 4, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+  	@articles2 = @articles_visible.where("category_1_id = :sports or category_1_id = :entertainment and not id = :lead_article_id", {sports: 3, entertainment: 2, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+    @articles3 = @articles_visible.where("category_1_id = :world or category_1_id = :culture and not id = :lead_article_id", {world: 5, culture: 6, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
 
 
-    @articles_two_columns_1 = Article.where("category_1_id = :business or category_1_id = :politics or category_1_id = :world and not id = :lead_article_id", {business: 1, politics: 4, world: 5, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
-    @articles_two_columns_2 = Article.where("category_1_id = :sports or category_1_id = :entertainment or category_1_id = :culture and not id = :lead_article_id", {sports: 3, entertainment: 2, culture: 6, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+    @articles_two_columns_1 = @articles_visible.where("category_1_id = :business or category_1_id = :politics or category_1_id = :world and not id = :lead_article_id", {business: 1, politics: 4, world: 5, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+    @articles_two_columns_2 = @articles_visible.where("category_1_id = :sports or category_1_id = :entertainment or category_1_id = :culture and not id = :lead_article_id", {sports: 3, entertainment: 2, culture: 6, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
 
   	# @columnists1 = Columnist.all.order("created_at DESC").limit(5).order("rating DESC")
   	# @columnists2 = Columnist.all.order("created_at DESC").limit(5).offset(5).order("rating DESC")
@@ -31,7 +33,7 @@ class PagesController < ApplicationController
 
     @leadarticle = Article.find(@category.top_article_id)
  
-    @articles = Article.where("category_1_id = :category_id and not id = :lead_article_id", {category_id: @category.id, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
+    @articles = Article.where("category_1_id = :category_id and visible = :visible_true and not id = :lead_article_id", {category_id: @category.id, visible_true: true, lead_article_id: @leadarticle.id}).order("created_at DESC").limit(12)
 
     ###Standard, three column article collections
 

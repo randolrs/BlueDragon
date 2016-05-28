@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <p>Image URL</p>
+    <%= f.text_field :img_url %>
+  </div>
+
+  <div class="field">
     <p>Category (Primary)</p>
     <%= collection_select(:article, :category_1_id, Category.all, :id, :name) %>
   </div>
@@ -31,30 +36,35 @@
     <%= collection_select(:article, :category_2_id, Category.all, :id, :name) %>
   </div>
 
-    <div class="form-group">
-      <%= f.label :image %>
-      <%= f.file_field :image, class: "form-control" %>
-    </div>
+  <div class="field">
+    <%= f.label "Visible" %> <br />
+    <%= f.check_box :visible %> <br />
+  </div>
 
-    <div class="field">
-      <%= f.label "Display Image" %> <br />
-      <%= f.check_box :imgoption %> <br />
-    </div>
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
 
-    <div class="field">
-      <%= f.label "Lead Story" %> <br />
-      <%= f.check_box :lead %> <br />
-    </div>
+  <div class="field">
+    <%= f.label "Display Image" %> <br />
+    <%= f.check_box :imgoption %> <br />
+  </div>
 
-     <div class="field">
-      <%= f.label "Red Text" %> <br />
-      <%= f.check_box :red %> <br />
-    </div>
+  <div class="field">
+    <%= f.label "Lead Story" %> <br />
+    <%= f.check_box :lead %> <br />
+  </div>
 
-    <div class="field">
-      <%= f.label "Italicize Text" %> <br />
-      <%= f.check_box :italicize %> <br />
-    </div>
+   <div class="field">
+    <%= f.label "Red Text" %> <br />
+    <%= f.check_box :red %> <br />
+  </div>
+
+  <div class="field">
+    <%= f.label "Italicize Text" %> <br />
+    <%= f.check_box :italicize %> <br />
+  </div>
 
   <div class="actions">
     <%= f.submit %>

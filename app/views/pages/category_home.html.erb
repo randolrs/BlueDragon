@@ -32,7 +32,7 @@
 						    <% @articles1.each do |article| %>
 						      <tr data-link="<%=article.url%>", class="article-index-row">
 						        <td class="article-index-data">
-						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
 						        	<b><%=link_to article.headline, article.url%></b>
 						    	</td>
 						      </tr>
@@ -45,7 +45,7 @@
 						    <%  @articles_two_columns_1.each do |article| %>
 						      <tr data-link="<%=article.url%>", class="article-index-row">
 						        <td class="article-index-data">
-						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
 						        	<b><%=link_to article.headline, article.url%></b>
 						    	</td>
 						      </tr>
@@ -90,7 +90,7 @@
 						    <% @articles2.each do |article| %>
 						      <tr data-link="<%=article.url%>", class="article-index-row">
 						        <td class="article-index-data">
-						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
 						        	<b><%=link_to article.headline, article.url%></b>
 						    	</td>
 						      </tr>
@@ -103,7 +103,7 @@
 						    <%  @articles_two_columns_2.each do |article| %>
 						      <tr data-link="<%=article.url%>", class="article-index-row">
 						        <td class="article-index-data">
-						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
 						        	<b><%=link_to article.headline, article.url%></b>
 						    	</td>
 						      </tr>
@@ -144,7 +144,7 @@
 						    <% @articles3.each do |article| %>
 						      <tr data-link="<%=article.url%>", class="article-index-row">
 						        <td class="article-index-data">
-						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
 						        	<b><%=link_to article.headline, article.url%></b>
 						    	</td>
 						      </tr>
