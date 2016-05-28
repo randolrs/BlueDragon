@@ -16,12 +16,12 @@
 		<div class="home-articles">
 
 			<div class="home-column left-column">
-				<%unless @articles1.nil?%>
-					<div class = "article-content">
-					
-						<table class ="article-index-table ">
-
-						  <tbody>
+				
+				<div class = "article-content">
+						
+					<table class ="article-index-table ">
+						<%unless @articles1.nil?%>
+						  <tbody class="three-columns">
 						    <% @articles1.each do |article| %>
 						      <tr data-link="<%=article.url%>", class="article-index-row">
 						        <td class="article-index-data">
@@ -30,12 +30,25 @@
 						    	</td>
 						      </tr>
 						    <% end %>
-
 						  </tbody>
+						<%end%>
 
-						</table>
-					</div>
-				<%end%>
+						<%unless @articles_two_columns_1.nil?%>
+						  <tbody class="two-columns">
+						    <%  @articles_two_columns_1.each do |article| %>
+						      <tr data-link="<%=article.url%>", class="article-index-row">
+						        <td class="article-index-data">
+						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<b><%=link_to article.headline, article.url%></b>
+						    	</td>
+						      </tr>
+						    <% end %>
+						  </tbody>
+						<%end%>
+					</table>
+
+				</div>
+				
 				
 				<%unless @columnists1.nil?%>
 					<div class = "columnist-content">
@@ -61,12 +74,12 @@
 			</div>
 
 			<div class="home-column center-column">
-				<%unless @articles2.nil?%>
-					<div class = "article-content">
-					
-						<table class ="article-index-table">
-
-						  <tbody>
+				
+				<div class = "article-content">
+						
+					<table class ="article-index-table ">
+						<%unless @articles2.nil?%>
+						  <tbody class="three-columns">
 						    <% @articles2.each do |article| %>
 						      <tr data-link="<%=article.url%>", class="article-index-row">
 						        <td class="article-index-data">
@@ -75,13 +88,24 @@
 						    	</td>
 						      </tr>
 						    <% end %>
-
 						  </tbody>
+						<%end%>
 
-						</table>
-					
-					</div>
-				<%end%>
+						<%unless @articles_two_columns_2.nil?%>
+						  <tbody class="two-columns">
+						    <%  @articles_two_columns_2.each do |article| %>
+						      <tr data-link="<%=article.url%>", class="article-index-row">
+						        <td class="article-index-data">
+						        	<%if article.imgoption%><%= image_tag article.image, class: "article-image-small"%><br><%end%>
+						        	<b><%=link_to article.headline, article.url%></b>
+						    	</td>
+						      </tr>
+						    <% end %>
+						  </tbody>
+						<%end%>
+					</table>
+
+				</div>
 
 				<%unless @columnists2.nil?%>
 					<div class = "columnist-content">

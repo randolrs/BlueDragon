@@ -114,6 +114,10 @@
     position: relative;
 }
 
+tbody.two-columns{
+		display:none;
+	}
+
 a.no-style-link{
 	text-decoration:none;
 
@@ -160,6 +164,14 @@ a.no-style-link{
 		max-width:49.5%;
 		width:399px;
 		border-right:none;
+	}
+
+	tbody.three-columns{
+		display:none;
+	}
+
+	tbody.two-columns{
+		display:block;
 	}
 }
 
