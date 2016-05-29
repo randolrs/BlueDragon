@@ -30,19 +30,18 @@
 
 .page-container{
 	margin-top:50px;
-	padding: 50px 0px;
-	background: #fff
+	background: #fff;
 }
 
 .page-container.category{
-	padding-top:82px;
+	padding: 50px 0px;
 }
 
 .top-story{
 	margin: 0px auto;
 	max-width:1000px;
 	text-align:center;
-	padding: 0px 10px;
+	padding: 50px 10px;
 }
 
 .top-story a{
@@ -124,7 +123,14 @@ a.article-headline{
     left: 50%;
     display: block;
     position: relative;
-    background: #222;
+}
+
+.home-articles-center{
+	float:left;
+	max-width: 100%;
+	width:100%;
+	margin: 0 auto;
+	background-color: #222;
 }
 
 .two-columns{
