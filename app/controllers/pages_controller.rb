@@ -41,7 +41,7 @@ class PagesController < ApplicationController
     @articles2 = Array.new 
     @articles3 = Array.new
 
-    c = @articles.count
+    c = @articles_visible.count
     
     i = 0
 
