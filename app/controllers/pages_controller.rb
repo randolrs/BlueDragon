@@ -5,9 +5,9 @@ class PagesController < ApplicationController
 
   	@leadarticle = Article.find_by_lead(true)
     
-    @articles_visible = Article.where("visible = :visible_true and not id = :lead_article_id", {visible_true: true, lead_article_id: @leadarticle.id})
+    @articles_visible = Article.where("visible = :visible_true and not id = :lead_article_id", {visible_true: true, lead_article_id: @leadarticle.id}).order('created_at DESC')
 
-        @articles1 = Array.new
+    @articles1 = Array.new
     @articles2 = Array.new 
     @articles3 = Array.new
 
@@ -99,7 +99,7 @@ class PagesController < ApplicationController
 
     @leadarticle = Article.find(@category.top_article_id)
  
-    @articles_visible = Article.where("visible = :visible_true and category_1_id = :category_id and not id = :lead_article_id", {visible_true: true, category_id: @category.id, lead_article_id: @leadarticle.id})
+    @articles_visible = Article.where("visible = :visible_true and category_1_id = :category_id and not id = :lead_article_id", {visible_true: true, category_id: @category.id, lead_article_id: @leadarticle.id}).order('created_at DESC')
 
     ###Standard, three column article collections
 
