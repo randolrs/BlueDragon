@@ -61,7 +61,7 @@ class PagesController < ApplicationController
 
         @articles_two_columns_2 << article
 
-        j = 2
+        j = 0
 
       else
 
@@ -157,7 +157,7 @@ class PagesController < ApplicationController
 
         @articles_two_columns_2 << article
 
-        j = 2
+        j = 0
 
       else
 
