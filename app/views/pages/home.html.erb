@@ -21,7 +21,7 @@
 					
 					<% @articles1.each do |article| %>
 
-						<a href="google.com" class="no-style-link">
+						<a href="<%= article.url %>" class="no-style-link">
 							<div class = "article-content three-columns">
 
 								<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
@@ -38,7 +38,7 @@
 					
 					<% @articles_two_columns_1.each do |article| %>
 
-						<a href="google.com" class="no-style-link">
+						<a href="<%= article.url %>" class="no-style-link">
 							<div class = "article-content two-columns">
 
 								<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
@@ -80,7 +80,7 @@
 					
 					<% @articles2.each do |article| %>
 
-						<a href="google.com" class="no-style-link">
+						<a href="<%= article.url %>" class="no-style-link">
 							<div class = "article-content three-columns">
 
 								<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
@@ -97,7 +97,7 @@
 					
 					<% @articles_two_columns_2.each do |article| %>
 
-						<a href="google.com" class="no-style-link">
+						<a href="<%= article.url %>" class="no-style-link">
 							<div class = "article-content two-columns">
 
 								<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
@@ -137,7 +137,7 @@
 					
 					<% @articles3.each do |article| %>
 
-						<a href="google.com" class="no-style-link">
+						<a href="<%= article.url %>" class="no-style-link">
 							<div class = "article-content three-columns">
 
 								<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
