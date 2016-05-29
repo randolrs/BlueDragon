@@ -31,6 +31,8 @@ class PagesController < ApplicationController
 
     @category = Category.find_by_url(params[:category])
 
+    @page_title = @category.name
+
     @leadarticle = Article.find(@category.top_article_id)
  
     @articles_visible = Article.where("visible = :visible_true and category_1_id = :category_id and not id = :lead_article_id", {visible_true: true, category_id: @category.id, lead_article_id: @leadarticle.id})
