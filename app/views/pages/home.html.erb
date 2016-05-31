@@ -50,10 +50,20 @@
 						<% @articles_two_columns_1.each do |article| %>
 
 							<a href="<%= article.url %>" class="no-style-link">
+								
 								<div class = "article-content two-columns">
 
-									<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
-								    <%=link_to article.headline, article.url, class:"article-headline" %>
+									<%if article.imgoption and article.img_url and not article.display_video %>
+
+										<img class="article-image-small" src="<%= article.img_url%>"></img><br>
+
+									<% elsif article.display_video and article.video_url %>
+
+										<%= render partial: 'pages/video_embed', locals: {article: article}%>
+
+									<%end%>
+
+									<%=link_to article.headline, article.url, class:"article-headline" %>
 
 								</div>
 							</a>
@@ -63,9 +73,9 @@
 					<%end%>
 					
 					<%unless @columnists1.nil?%>
+
 						<div class = "columnist-content">
 
-						
 							<table class ="article-index-table">
 
 							  <tbody>
@@ -94,8 +104,17 @@
 							<a href="<%= article.url %>" class="no-style-link">
 								<div class = "article-content three-columns">
 
-									<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
-								    <%=link_to article.headline, article.url, class:"article-headline" %>
+									<%if article.imgoption and article.img_url and not article.display_video %>
+
+										<img class="article-image-small" src="<%= article.img_url%>"></img><br>
+
+									<% elsif article.display_video and article.video_url %>
+
+										<%= render partial: 'pages/video_embed', locals: {article: article}%>
+
+									<%end%>
+
+									<%=link_to article.headline, article.url, class:"article-headline" %>
 
 								</div>
 							</a>
@@ -111,8 +130,17 @@
 							<a href="<%= article.url %>" class="no-style-link">
 								<div class = "article-content two-columns">
 
-									<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
-								    <%=link_to article.headline, article.url, class:"article-headline" %>
+									<%if article.imgoption and article.img_url and not article.display_video %>
+
+										<img class="article-image-small" src="<%= article.img_url%>"></img><br>
+
+									<% elsif article.display_video and article.video_url %>
+
+										<%= render partial: 'pages/video_embed', locals: {article: article}%>
+
+									<%end%>
+
+									<%=link_to article.headline, article.url, class:"article-headline" %>
 
 								</div>
 							</a>
@@ -149,10 +177,20 @@
 						<% @articles3.each do |article| %>
 
 							<a href="<%= article.url %>" class="no-style-link">
+								
 								<div class = "article-content three-columns">
 
-									<%if article.imgoption and article.img_url %><img class="article-image-small" src="<%= article.img_url%>"></img><br><%end%>
-								    <%=link_to article.headline, article.url, class:"article-headline" %>
+									<%if article.imgoption and article.img_url and not article.display_video %>
+
+										<img class="article-image-small" src="<%= article.img_url%>"></img><br>
+
+									<% elsif article.display_video and article.video_url %>
+
+										<%= render partial: 'pages/video_embed', locals: {article: article}%>
+
+									<%end%>
+
+									<%=link_to article.headline, article.url, class:"article-headline" %>
 
 								</div>
 							</a>
