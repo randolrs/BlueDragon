@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528050443) do
+ActiveRecord::Schema.define(version: 20160531173448) do
 
   create_table "articles", force: true do |t|
     t.string   "headline"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20160528050443) do
     t.integer  "category_2_id",      default: 0
     t.string   "img_url"
     t.boolean  "visible",            default: false
+    t.string   "video_url"
+    t.boolean  "display_video",      default: false
   end
 
   create_table "categories", force: true do |t|

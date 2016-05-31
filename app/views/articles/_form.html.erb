@@ -27,6 +27,11 @@
   </div>
 
   <div class="field">
+    <p>Video URL</p>
+    <%= f.text_field :video_url %>
+  </div>
+
+  <div class="field">
     <p>Category (Primary)</p>
     <%= collection_select(:article, :category_1_id, Category.all, :id, :name) %>
   </div>
@@ -41,14 +46,19 @@
     <%= f.check_box :visible %> <br />
   </div>
 
-  <div class="form-group">
-    <%= f.label :image %>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
+<!--   <div class="form-group">
+    <%# f.label :image %>
+    <%# f.file_field :image, class: "form-control" %>
+  </div> -->
 
   <div class="field">
     <%= f.label "Display Image" %> <br />
     <%= f.check_box :imgoption %> <br />
+  </div>
+
+  <div class="field">
+    <%= f.label "Display Video" %> <br />
+    <%= f.check_box :display_video %> <br />
   </div>
 
   <div class="field">
