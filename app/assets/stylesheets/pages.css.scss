@@ -194,3 +194,23 @@ a.no-style-link{
 	}
 }
 
+@media only screen and (max-width: 400px) {
+
+	.home-column.center-column{
+		display:none;
+	}
+
+	.home-column.left-column{
+		max-width:100%;
+		width:399px;
+	}
+
+	.three-columns{
+		display:none;
+	}
+
+	.two-columns{
+		display:block;
+	}
+}
+
